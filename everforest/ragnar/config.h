@@ -191,8 +191,8 @@ static const Monitor Monitors[MONITOR_COUNT] = {(Monitor){.width = 1920, .height
 #define BAR_SLICES_COUNT                    4
 
 #define BAR_INFO_LABEL_DESKTOP_ICON_SIZE    50
-static const char* BarInfoLabelDesktopIcons[DESKTOP_COUNT] = { "", "", "", "", "", "" };
-static const uint32_t BarInfoLabelPos[MONITOR_COUNT] = {900};
+static const char* BarInfoLabelDesktopIcons[DESKTOP_COUNT] = { " ", " ", " ", " ", " ", " " };
+static const uint32_t BarInfoLabelPos[MONITOR_COUNT] = {815};
 static BarCommand  BarCommands[BAR_SLICES_COUNT] = 
 { 
     (BarCommand){.cmd = "echo \"  󰣇\"", .refresh_time = 300.0f},
@@ -202,15 +202,14 @@ static BarCommand  BarCommands[BAR_SLICES_COUNT] =
 };
 
 #define BAR_BUTTON_PADDING                  20
-#define BAR_BUTTON_SIZE                     50
-#define BAR_BUTTON_COUNT                    4
+#define BAR_BUTTON_SIZE                     100
+#define BAR_BUTTON_COUNT                    3
 static const uint32_t BarButtonLabelPos[MONITOR_COUNT] = { 1350 };
 static BarButton BarButtons[BAR_BUTTON_COUNT] =
 {
-    (BarButton){.cmd = APPLICATION_LAUNCHER_CMD, .icon = "", .color = 0x2e383c},
-    (BarButton){.cmd = TERMINAL_CMD, .icon = "", .color = 0x2e383c},
-    (BarButton){.cmd = WEB_BROWSER_CMD, .icon = "", .color = 0x2e383c},
-    (BarButton){.cmd = "nitrogen &", .icon = "", .color = 0x2e383c},
+    (BarButton){.cmd = APPLICATION_LAUNCHER_CMD, .icon = "Search", .color = 0x2e383c},
+    (BarButton){.cmd = TERMINAL_CMD, .icon = "Terminal", .color = 0x2e383c},
+    (BarButton){.cmd = WEB_BROWSER_CMD, .icon = "Browse", .color = 0x2e383c},
 };
 
 
@@ -222,3 +221,9 @@ static ScratchpadDef ScratchpadDefs[SCRATCH_PAD_COUNT] =
     (ScratchpadDef){.cmd = "alacritty -e mocp &", .key = XK_2},
 };
 
+#define CUSTOM_KEYBIND_COUNT 1 
+
+static Keybind CustomKeybinds[CUSTOM_KEYBIND_COUNT] =
+{
+    (Keybind){.cmd = "flameshot gui &", .key = XK_E}
+}; 
