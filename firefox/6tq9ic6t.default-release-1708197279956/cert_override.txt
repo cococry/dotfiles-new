@@ -1,0 +1,3 @@
+# PSM Certificate Override Settings file
+# This is a generated file!  Do not edit.
+www.pngkit.com:443:	OID.2.16.840.1.101.3.4.2.1	BF:5F:8E:5C:5E:BD:C8:74:E1:FD:5F:52:34:6F:CB:2F:47:D8:5E:96:B9:DE:C9:5D:F6:95:0A:BE:FE:32:77:06	
